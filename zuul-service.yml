@@ -1,0 +1,23 @@
+server:
+  port: 8082
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8083
+
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie,Authorization
+  addProxyHeaders: true
+  ignoredServices: "*"
+  prefix: /api
+  routes:
+    helloworld:
+      path: /helloworld/**
+      sensitiveHeaders:
+      serviceId: helloworld-service
