@@ -1,2 +1,15 @@
+server:
+  port: 8088
+
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8083
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+
 helloworld:
-    who: OMEGA
+  who: OMEGA
