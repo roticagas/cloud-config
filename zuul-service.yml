@@ -6,11 +6,6 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8081/eureka/
 
-spring:
-  cloud:
-    config:
-      uri: http://localhost:8083
-
 zuul:
   sensitiveHeaders: Cookie,Set-Cookie,Authorization
   addProxyHeaders: true
