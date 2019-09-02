@@ -14,5 +14,4 @@ zuul:
   routes:
     helloworld:
       path: /helloworld/**
-      sensitiveHeaders:
       serviceId: helloworld-service
